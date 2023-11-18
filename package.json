@@ -1,22 +1,33 @@
 {
-  "name": "nuxt-app",
+  "name": "memory-maze-front",
+  "version": "1.0.0",
   "private": true,
-  "type": "module",
   "scripts": {
-    "build": "nuxt build",
     "dev": "nuxt dev",
+    "build": "nuxt build",
+    "start": "nuxt start",
     "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "lint:js": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore .",
+    "lint:prettier": "prettier --check .",
+    "lint": "npm run lint:js && npm run lint:prettier",
+    "lintfix": "prettier --write --list-different . && npm run lint:js -- --fix"
+  },
+  "dependencies": {
+    "core-js": "^3.25.3",
+    "vue": "^3.3.8",
+    "@vue/compiler-sfc": "^3.3.8"
   },
   "devDependencies": {
-    "@nuxt/devtools": "latest",
-    "eslint": "^8.54.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.1",
+    "@babel/eslint-parser": "^7.19.1",
+    "@nuxt/types": "^2.15.8",
+    "@nuxt/typescript-build": "^2.1.0",
+    "@nuxtjs/eslint-config-typescript": "^11.0.0",
+    "@nuxtjs/eslint-module": "^3.1.0",
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-vue": "^9.5.1",
     "nuxt": "^3.8.1",
-    "prettier": "^3.1.0",
-    "vue": "^3.3.8",
-    "vue-router": "^4.2.5"
+    "prettier": "^2.7.1"
   }
 }
