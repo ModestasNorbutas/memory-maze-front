@@ -1,10 +1,10 @@
 <template>
-  <h1>Home</h1>
+  <h1>Play</h1>
 </template>
 
 <script lang="ts">
 export default defineComponent({
-  name: 'IndexPage',
+  name: 'PlayPage',
   layout: 'default',
 });
 </script>
